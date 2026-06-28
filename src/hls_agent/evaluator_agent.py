@@ -7,7 +7,7 @@ class EvaluatorAgent:
     def summarize(self, task_id: str, evidence: VerificationEvidence, review_decision: str) -> RunSummary:
         passed = evidence.failure_stage is None
         final_stage = "cosim" if passed else evidence.failure_stage or "unknown"
-        notes = ["Public demo result only.", f"review={review_decision}"]
+        notes = ["Public repository result only.", f"review={review_decision}"]
         return RunSummary(
             task_id=task_id,
             stages=evidence.task_bundle["stages"],

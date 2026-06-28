@@ -8,14 +8,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
-class DemoPipelineTest(unittest.TestCase):
-    def test_demo_cli_runs(self) -> None:
+class PipelineTest(unittest.TestCase):
+    def test_cli_runs(self) -> None:
         env = {"PYTHONPATH": str(ROOT / "src")}
         result = subprocess.run(
             [
                 sys.executable,
                 "-m",
-                "demo_hls_agent.cli",
+                "hls_agent.cli",
                 "--task",
                 str(ROOT / "examples" / "task.json"),
             ],
@@ -25,7 +25,7 @@ class DemoPipelineTest(unittest.TestCase):
             env=env,
         )
         payload = json.loads(result.stdout)
-        self.assertEqual(payload["task_id"], "toy_case_01")
+        self.assertEqual(payload["task_id"], "example_case_01")
         self.assertTrue(payload["passed"])
 
 

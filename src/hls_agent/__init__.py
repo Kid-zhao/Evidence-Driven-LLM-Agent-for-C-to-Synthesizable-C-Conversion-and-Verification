@@ -1,4 +1,4 @@
-"""Minimal public demo for an evidence-driven HLS agent workflow."""
+"""Minimal public skeleton for an evidence-driven HLS agent workflow."""
 
 from .orchestrator import HLSOrchestrator
 

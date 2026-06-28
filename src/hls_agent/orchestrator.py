@@ -14,7 +14,7 @@ from .types import RunSummary, TaskSpec
 
 
 class HLSOrchestrator:
-    """Wires the public demo modules into a tiny closed loop."""
+    """Wires the public modules into a tiny closed loop."""
 
     def __init__(self) -> None:
         self.planner = PlannerAgent()

@@ -12,7 +12,7 @@ class HLSFailureAnalyst:
             patch_intent="Add the missing trace hooks and keep the interface unchanged.",
             patch_scope="Local patch in the generated top function only.",
             must_preserve=["top function name", "declared interface shape"],
-            retrieval_tags=[family, "toy-demo"],
+            retrieval_tags=[family, "public-skeleton"],
             next_action="patch-and-reverify",
             confidence=0.8,
             evidence_citations=["raw_stage_errors[0]"] if evidence.raw_stage_errors else [],

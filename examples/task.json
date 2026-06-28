@@ -1,7 +1,7 @@
 {
-  "task_id": "toy_case_01",
-  "top_function": "demo_top",
-  "source_summary": "Toy C kernel summary for a copy-like loop.",
+  "task_id": "example_case_01",
+  "top_function": "hls_kernel",
+  "source_summary": "Example C kernel summary for a copy-like loop.",
   "interface_summary": "int* a, int* b, int n",
   "constraints": [
     "keep interface stable",

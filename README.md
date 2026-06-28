@@ -1,6 +1,6 @@
-# Evidence-Driven LLM Agent Open Demo
+# Evidence-Driven LLM Agent for C-to-Synthesizable-C Conversion and Verification
 
-This repository is a minimal public demo for an evidence-driven HLS agent workflow.
+This repository is a minimal public implementation skeleton for an evidence-driven HLS agent workflow.
 
 It only keeps the high-level module relationships:
 
@@ -18,17 +18,17 @@ Sensitive details are intentionally removed:
 ## Repository Layout
 
 ```text
-src/demo_hls_agent/   Minimal Python package
-examples/             One toy task input
+src/hls_agent/        Minimal Python package
+examples/             One example task input
 tests/                One smoke test
 ```
 
 ## Quick Start
 
 ```bash
-PYTHONPATH=src python3 -m demo_hls_agent.cli --task examples/task.json
+PYTHONPATH=src python3 -m hls_agent.cli --task examples/task.json
 ```
 
 ## Scope
 
-This demo is meant to show structure only. It is not intended to reproduce paper results or expose the private research workflow.
+This repository is meant to show the workflow structure only. It is not intended to reproduce paper results or expose the private research workflow.

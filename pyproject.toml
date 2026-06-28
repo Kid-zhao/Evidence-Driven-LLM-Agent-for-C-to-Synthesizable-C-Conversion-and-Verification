@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hls-agent-open-demo"
+name = "evidence-driven-hls-agent"
 version = "0.1.0"
 description = "Minimal open-source skeleton for an evidence-driven HLS agent workflow"
 readme = "README.md"

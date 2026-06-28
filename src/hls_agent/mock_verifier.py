@@ -20,6 +20,6 @@ class MockVerifier:
                 "stages": self.stages,
             },
             artifact_trace={
-                "public_note": "Real tool logs are omitted in the open demo.",
+                "public_note": "Real tool logs are omitted in the public repository.",
             },
         )

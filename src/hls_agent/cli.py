@@ -8,7 +8,7 @@ from .orchestrator import HLSOrchestrator
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--task", required=True, help="Path to a demo task JSON file.")
+    parser.add_argument("--task", required=True, help="Path to a task JSON file.")
     args = parser.parse_args()
 
     orchestrator = HLSOrchestrator()

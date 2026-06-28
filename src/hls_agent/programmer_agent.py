@@ -8,7 +8,7 @@ class ProgrammerAgent:
         code = (
             f"// top_function: {brief.top_function}\n"
             "// prompt: ...\n"
-            "void demo_top(int *a, int *b, int n) {\n"
+            "void hls_kernel(int *a, int *b, int n) {\n"
             "    for (int i = 0; i < n; ++i) {\n"
             "        b[i] = a[i];\n"
             "    }\n"
