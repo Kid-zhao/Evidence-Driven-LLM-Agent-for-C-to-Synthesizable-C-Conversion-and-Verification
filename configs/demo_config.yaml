@@ -1,0 +1,9 @@
+model:
+  planner_prompt: "..."
+  programmer_prompt: "..."
+  reviewer_prompt: "..."
+
+runtime:
+  verifier: "mock"
+  rag_enabled: false
+  max_repair_rounds: 1

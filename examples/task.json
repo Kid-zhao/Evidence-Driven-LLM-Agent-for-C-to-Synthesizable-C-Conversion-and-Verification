@@ -1,0 +1,10 @@
+{
+  "task_id": "toy_case_01",
+  "top_function": "demo_top",
+  "source_summary": "Toy C kernel summary for a copy-like loop.",
+  "interface_summary": "int* a, int* b, int n",
+  "constraints": [
+    "keep interface stable",
+    "return full code only"
+  ]
+}
