@@ -1,8 +1,0 @@
-{
-  "task_id": "toy_case_01",
-  "stages": ["compile", "csim", "synth", "cosim"],
-  "passed": true,
-  "final_stage": "cosim",
-  "review_decision": "accept-with-warning",
-  "notes": ["Public demo result only.", "review=accept-with-warning"]
-}

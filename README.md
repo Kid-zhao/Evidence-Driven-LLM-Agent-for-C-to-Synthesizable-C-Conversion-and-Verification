@@ -1,49 +1,34 @@
-# HLS Agent Open Demo
+# Evidence-Driven LLM Agent Open Demo
 
-This repository is a minimal open-source skeleton that demonstrates the module boundaries and data flow of an evidence-driven HLS agent workflow.
+This repository is a minimal public demo for an evidence-driven HLS agent workflow.
 
-It is intentionally simplified:
+It only keeps the high-level module relationships:
 
-- Sensitive prompts are replaced with `...`.
-- Real repair heuristics are omitted.
-- Real benchmark assets and locked experiment data are not included.
-- The verifier is a mock four-stage pipeline rather than a real HLS toolchain.
+- `planner -> programmer -> instrumentor -> verifier -> analyst -> reviewer -> evaluator`
+- typed evidence objects passed between modules
+- a mock four-stage verification loop: `compile -> csim -> synth -> cosim`
 
-## What This Demo Shows
+Sensitive details are intentionally removed:
 
-- A planner -> programmer -> instrumentor -> verifier -> reviewer -> evaluator workflow
-- Evidence objects that move between modules
-- A retrieval interface stub for future RAG integration
-- A mock end-to-end run that produces a structured summary
+- prompts are replaced with `...`
+- real repair heuristics are omitted
+- private benchmarks and locked experiment assets are not included
+- the verifier is a mock implementation, not a vendor HLS toolchain
 
 ## Repository Layout
 
 ```text
-src/demo_hls_agent/      Minimal Python package
-docs/                    Public-facing workflow and module docs
-configs/                 Demo configuration
-examples/                Example task input
-data/toy_cases/          Tiny toy case instead of real benchmark assets
-results/                 Example output schema
-tests/                   Basic smoke tests
+src/demo_hls_agent/   Minimal Python package
+examples/             One toy task input
+tests/                One smoke test
 ```
 
 ## Quick Start
 
 ```bash
-python3 -m demo_hls_agent.cli --task examples/task.json
+PYTHONPATH=src python3 -m demo_hls_agent.cli --task examples/task.json
 ```
 
-## Design Notes
+## Scope
 
-- The orchestrator owns the loop and module wiring.
-- Each module exposes a small interface and returns typed objects.
-- The mock verifier simulates `compile -> csim -> synth -> cosim`.
-- Prompt-bearing fields are represented as `...` placeholders.
-
-## Non-Goals
-
-- Reproducing paper results
-- Shipping real prompts
-- Shipping real repair cards or private evidence corpora
-- Interfacing with Vivado/Vitis or other vendor tools
+This demo is meant to show structure only. It is not intended to reproduce paper results or expose the private research workflow.
